@@ -111,8 +111,7 @@ namespace PhehelloSemoko_PROG6221_Part1_ST10163295
                
                 while (!exit)
                 {
-                    Console.WriteLine("");
-                    Console.WriteLine("");
+                   
                     Console.WriteLine("---------------------------------------------------------");
                     Console.WriteLine("                      Recipe Maker");
                     Console.WriteLine("---------------------------------------------------------");
