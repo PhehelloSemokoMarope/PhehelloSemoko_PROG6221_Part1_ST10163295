@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Services;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -63,6 +64,7 @@ namespace PhehelloSemoko_PROG6221_Part1_ST10163295
 
         public void showRecipe()
         {
+
             Console.WriteLine("---------------------------------------------------------");
             Console.WriteLine($"                      RECIPE NAME: {recipeName}");
             Console.WriteLine("---------------------------------------------------------");
@@ -81,6 +83,21 @@ namespace PhehelloSemoko_PROG6221_Part1_ST10163295
 
         }
 
+        public void clearRecipe()
+        {
+            nameIngred = new string[0];
+            quantityOfIngred = new int[0];
+            unitOfIngred = new String[0];
+            listSteps = new string[0];
+            recipeName = "" ;
+
+            Console.Write("");
+            Console.Write("Everything has been cleared!");
+            Console.Write("");
+
+
+        }
+
 
         internal class Program
         {
@@ -94,6 +111,8 @@ namespace PhehelloSemoko_PROG6221_Part1_ST10163295
                
                 while (!exit)
                 {
+                    Console.WriteLine("");
+                    Console.WriteLine("");
                     Console.WriteLine("---------------------------------------------------------");
                     Console.WriteLine("                      Recipe Maker");
                     Console.WriteLine("---------------------------------------------------------");
@@ -101,8 +120,8 @@ namespace PhehelloSemoko_PROG6221_Part1_ST10163295
                     Console.WriteLine("Select one of the following menu items:");
                     Console.WriteLine("(1) Create menu");
                     Console.WriteLine("(2) Show Recipe");
-                    Console.WriteLine("(3)");
-                    Console.WriteLine("(3) Exit Menu");
+                    Console.WriteLine("(3) Clear Recipe");
+                    Console.WriteLine("(4) Exit Menu");
                     Console.WriteLine("");
 
                     string choice = Console.ReadLine();
@@ -116,7 +135,12 @@ namespace PhehelloSemoko_PROG6221_Part1_ST10163295
                             myRecipe.showRecipe();
                             break;
 
-                        case "3":
+                        case "3":  
+                            myRecipe.clearRecipe();
+                            Console.Write("");
+                            break;
+
+                        case "4":
                             myRecipe.exitMenu();
                             break;
                     }
